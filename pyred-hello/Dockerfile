@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Install redis so we can connect to a different container
-RUN apt-get update && apt-get install curl redis-server
+RUN apt-get update && apt-get install -y curl redis-server
 # Install any needed packages specified in requirements.txt
 RUN pip install --upgrade pip==19.0.3
 RUN pip install --trusted-host pypi.python.org -r requirements.txt

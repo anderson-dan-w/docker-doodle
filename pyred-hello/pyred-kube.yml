@@ -7,7 +7,7 @@ metadata:
     app: pyred-app
 spec:
   containers:
-  - image: andersondanw/pyred-hello:v0
+  - image: andersondanw/pyred-hello:v0.2
     imagePullPolicy: IfNotPresent
     name: pyred-container
     ports:
