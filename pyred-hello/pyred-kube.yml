@@ -10,11 +10,7 @@ spec:
   - image: andersondanw/pyred-hello:v0.3
     imagePullPolicy: IfNotPresent
     name: pyred-container
-    ports:
-    - containerPort: 6379
   - image: redis
     imagePullPolicy: IfNotPresent
     name: redis
-    ports:
-    - containerPort: 6379
   restartPolicy: Always
