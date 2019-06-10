@@ -8,4 +8,7 @@ spec:
   - image: andersondanw/pyred-hello:v0
     imagePullPolicy: IfNotPresent
     name: pyred-container
+  - image: redis
+    imagePullPolicy: IfNotPresent
+    name: redis
   restartPolicy: Always
