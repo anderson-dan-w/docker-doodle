@@ -4,7 +4,7 @@ import os
 import socket
 
 # Connect to Redis
-redis = Redis(host="redis", db=0, port=6380, socket_connect_timeout=2, socket_timeout=2)
+redis = Redis(host="redis", db=0, port=6379, socket_connect_timeout=2, socket_timeout=2)
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ def hello():
     try:
         visits = redis.incr("counter")
     except RedisError:
-        visits = "<i>cannot connect to Redis on port 6380, counter disabled</i>"
+        visits = "<i>cannot connect to Redis on port 6379, counter disabled</i>"
 
     html = "<h3>Hello {name}!</h3>" \
            "<b>Hostname:</b> {hostname}<br/>" \
