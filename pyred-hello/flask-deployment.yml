@@ -1,25 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pyred-deployment
+  name: flask-deployment
   labels:
-    app: pyred-app
+    app: flask-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: pyred-app
+      app: flask-app
   template:
     metadata:
       namespace: default
       labels:
-        app: pyred-app
+        app: flask-app
     spec:
       containers:
       - image: andersondanw/pyred-hello:v0.3
         imagePullPolicy: IfNotPresent
         name: flask
-      - image: redis
-        imagePullPolicy: IfNotPresent
-        name: redis
       restartPolicy: Always
