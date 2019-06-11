@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pyred-app
+  name: pyred-pod
   namespace: default
   labels:
     app: pyred-app
@@ -9,7 +9,7 @@ spec:
   containers:
   - image: andersondanw/pyred-hello:v0.3
     imagePullPolicy: IfNotPresent
-    name: pyred-container
+    name: flask
   - image: redis
     imagePullPolicy: IfNotPresent
     name: redis
