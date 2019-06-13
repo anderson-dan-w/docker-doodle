@@ -16,7 +16,7 @@ spec:
         app: flask-app
     spec:
       containers:
-      - image: andersondanw/pyred-hello:v0.3
+      - image: andersondanw/pyred-hello:v0.4
         imagePullPolicy: IfNotPresent
         name: flask
       restartPolicy: Always
